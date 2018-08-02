@@ -1,0 +1,14 @@
+<div>{{desc}}</div>
+<div *ngIf="product.usns.length>0">
+    <span>US </span> 
+    <span>{{product.usns.length}} records found </span> 
+</div>
+
+<my-car parentName="car list component" [data1]=product.usns (clickHappen)="receiveClick($event)"></my-car>
+
+<div *ngIf="product.cbns.length>0">
+        <span>CB </span> 
+        <span>{{product.cbns.length}} records found </span> 
+    </div>
+    
+    <my-car parentName="car list component" [data1]=product.cbns (clickHappen)="receiveClick($event)"></my-car>
